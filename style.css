@@ -1,0 +1,105 @@
+@import url('https://fonts.googleapis.com/css2?family=Kalam:wght@400;700&display=swap');
+body,html {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+.bg {
+
+    min-width: 100vw;
+    height: 100vh;
+    background-image: url(https://images.pexels.com/photos/1226402/pexels-photo-1226402.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+.bg-layer {
+    height: 100%;
+    background-color: rgba(68, 68, 68, 0.6);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.form-container {
+    background: #f6e58d;
+    padding: 3rem 2rem;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.form-container h1, .form-container input, .form-container button {
+    color: #130f40;
+    font-family: 'Kalam', cursive;
+}
+.form-container input {
+    display: block;
+    text-align: center;
+    font-size: 1rem;
+    font-weight: 400;
+    padding: 0.5rem 2rem;
+    margin-bottom: 0.5rem;
+    background-color: #f6e58d;
+    border: 0;
+    border-bottom: 2px solid #ffbe76;
+    transition: border-color ease-out 0.4s;
+}
+
+.form-container input:focus {
+    outline: 0;
+    border-color: #686de0;  
+}
+.form-container input.wrong {
+    border-color: #eb4d4b;  
+}
+/* Maximo Gomez 15-2766 */
+.form-container button {
+    display: block;
+    min-width: 60%;
+    font-size: 1.2rem;
+    padding: 0.3rem;
+    margin: 2rem auto 0 auto;
+    background-color: #ffbe76;
+    border: 0;
+    transition: background-color 0.5s, color 0.2s ease-out;
+}
+.form-container button:hover {
+    background-color: #686de0;
+    color: #dff9fb;
+    cursor: pointer;
+}
+.form-container button:focus {
+    outline: 0;
+}
+
+.say-no {
+    animation-duration: 0.2s;
+    animation-name: shake;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 2;
+}
+
+.say-yes {
+    animation-duration: 0.2s;
+    animation-name: nod;
+    animation-timing-function: ease-in;
+    animation-iteration-count: 2;   
+}
+
+@keyframes shake {
+    from {
+        transform: translateX(-20px);
+    }
+    to {
+        transform: translateX(0px);
+    }
+}
+@keyframes nod {
+    from {
+        transform: translateY(20px);
+    }
+    to {
+        transform: translateY(0px);
+    }
+}
